@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ScreenDemo</string>
+    <string name="greeting">Good Morning!</string>
+    <string name="search">Enter search query here</string>
+    <string name="name">Baddo</string>
+    <string name="location">Lagos NG</string>
+    <string name="follow">Meet Me</string>
+    <string name="message">Send Aza</string>
+    <string name="Formore">See More</string>
+</resources>
