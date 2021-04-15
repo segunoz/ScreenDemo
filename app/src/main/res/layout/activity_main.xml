@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+
+    <Switch
+        android:id="@+id/darkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Dark Mode"
+        app:layout_constraintRight_toLeftOf="@id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
         android:id="@+id/searchView1"
@@ -30,12 +40,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:text="@string/greeting"
+        android:textColor="#100E0E"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="8dp"
-        />
+        tools:layout_editor_absoluteY="8dp" />
 
     <ImageView
         android:id="@+id/imageView1"
@@ -53,9 +63,9 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
-        android:clickable="true"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:clickable="true"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -64,11 +74,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="191dp"
-        tools:layout_editor_absoluteY="465dp"
-        app:layout_constraintTop_toBottomOf="@id/searchView1"
-        >
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchView1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,6 +100,7 @@
                 android:layout_marginLeft="160dp"
                 android:layout_marginTop="20dp"
                 android:text="@string/name"
+                android:textColor="@color/black"
                 android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -105,6 +117,7 @@
                 android:fontFamily="sans-serif-black"
                 android:text="@string/location"
                 android:textAllCaps="true"
+                android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -118,22 +131,21 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="2dp"
                 android:layout_marginRight="5dp"
+                android:clickable="true"
                 android:padding="18dp"
                 android:text="@string/follow"
-                app:backgroundTint="@color/black"
-                app:cornerRadius="13dp"
-                android:clickable="true"
-                />
+                app:backgroundTint="@color/design_default_color_on_secondary"
+                app:cornerRadius="13dp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:textColor="@color/black"
-                android:text="@string/message"
+                android:backgroundTint="@color/white"
                 android:padding="18dp"
+                android:text="@string/message"
+                android:textColor="@color/black"
 
                 />
 
@@ -237,38 +249,20 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="10dp"
                 android:layout_marginEnd="4dp"
                 android:layout_marginRight="2dp"
+                android:layout_marginBottom="10dp"
                 android:padding="12dp"
                 android:text="@string/Formore"
                 android:textColor="@color/black"
                 app:backgroundTint="@color/white"
-                app:cornerRadius="10dp" />
-
-
+                app:cornerRadius="10dp"></Button>
 
         </LinearLayout>
 
 
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="2dp"
-            android:padding="12dp"
-            android:text="@string/Formore"
-            android:textColor="@color/black"
-            app:backgroundTint="@color/white"
-            app:cornerRadius="10dp" />
-
-
     </ScrollView>
+
 
 
 
